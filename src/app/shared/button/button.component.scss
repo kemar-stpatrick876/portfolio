@@ -1,0 +1,62 @@
+@import '../../../styles/colors.scss';
+@import '../../../styles/typography.scss';
+
+.portfolio-button {
+  width: 200px;
+  height: 48px;
+  border: 1px solid $black;
+  font-family: $font-family-sans;
+  cursor: pointer;
+  transition: all 500ms ease-in-out;
+  display: flex;
+  input {
+    border: none;
+    background-color: inherit;
+    color: inherit;
+    text-align: center;
+    outline: none;
+    cursor: pointer;
+  }
+  &--primary {
+    background-color: $primary_dark_blue;
+    color: $white;
+    display: flex;
+    &:hover {
+      background-color: $primary_cyan;
+      border-color: $primary_cyan;
+    }
+    .box-left {
+      flex-basis: 20%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background-color: $black;
+      opacity: 0.2;
+    }
+
+    input {
+      flex-basis: 80%;
+      border: none;
+      opacity: .8;
+    }
+  }
+  &--secondary {
+    background-color: $white;
+    color: $primary_dark_blue;
+    &:hover {
+      background-color: $primary_dark_blue;
+      color: $white;
+    }
+    input {
+      flex-basis: 100%;
+    }
+  }
+  &--disabled {
+    cursor: not-allowed;
+    opacity: .2;
+    input {
+      cursor: not-allowed;
+    }
+  }
+
+}
