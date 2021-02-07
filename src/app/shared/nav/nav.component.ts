@@ -25,6 +25,8 @@ export class NavComponent implements OnInit {
       path: '/contact',
     },
   ];
+
+  mobileNavOpen = false;
   constructor() {}
 
   ngOnInit(): void {}
