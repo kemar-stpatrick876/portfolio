@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { CommonService } from 'src/app/shared/common.service';
-import { BreakpointState } from '@angular/cdk/layout';
+import { ResponsiveService } from 'src/app/shared/responsive.service';
 import { Router } from '@angular/router';
 
 @Component({
@@ -9,28 +8,12 @@ import { Router } from '@angular/router';
   styleUrls: ['./home.component.scss'],
 })
 export class HomeComponent implements OnInit {
-  public screenType = 'assets/images/homepage/mobile/image-homepage-hero.jpg';
-  constructor(private commonService: CommonService, private router: Router) {}
+  constructor(
+    public responsiveSrv: ResponsiveService,
+    private router: Router
+  ) {}
 
-  ngOnInit(): void {
-    this.commonService
-      .watchForBreakpointChanges()
-      .subscribe((state: BreakpointState) => {
-        if (state.matches) {
-          this._updateScreenPath();
-        }
-      });
-  }
-
-  private _updateScreenPath(): void {
-    if (this.commonService.isMobileScreen) {
-      this.screenType = 'mobile';
-    } else if (this.commonService.isTabletScreen) {
-      this.screenType = 'tablet';
-    } else {
-      this.screenType = 'desktop';
-    }
-  }
+  ngOnInit(): void {}
 
   public goToPortfolio(): void {
     this.router.navigateByUrl('portfolio');

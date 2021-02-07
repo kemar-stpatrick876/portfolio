@@ -4,6 +4,7 @@ import { HomeComponent } from './home/home/home.component';
 import { ProjectsComponent } from './projects/projects/projects.component';
 import { ContactMeComponent } from './contact/contact-me/contact-me.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
+import { ProjectDetailsComponent } from './projects/project-details/project-details.component';
 
 const routes: Routes = [
   {
@@ -14,6 +15,11 @@ const routes: Routes = [
   {
     path: 'portfolio',
     component: ProjectsComponent,
+    pathMatch: 'full',
+  },
+  {
+    path: 'portfolio/:id',
+    component: ProjectDetailsComponent,
     pathMatch: 'full',
   },
   {

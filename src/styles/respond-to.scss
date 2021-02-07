@@ -1,9 +1,7 @@
-$small-desktop: 992px;
-$large-desktop: 1200px;
+$desktop: 1200px;
 $handheld: 768px;
-$handhelds-landscape: 1024px;
 $mobile: 640px;
-$mobile-landscape: 480px;
+// TODO: Can later refactor to support more granular responsiveness
 
 @mixin respond-mobile() {
   @media (max-width: ($handheld - 1)) {
@@ -17,14 +15,14 @@ $mobile-landscape: 480px;
       @content;
     }
   } @else {
-    @media (min-width: $handheld) and (max-width: ($small-desktop - 1)) {
+    @media (min-width: $handheld) and (max-width: ($desktop - 1)) {
       @content;
     }
   }
 }
 
 @mixin respond-desktop() {
-  @media (min-width: $small-desktop) {
+  @media (min-width: $desktop) {
     @content;
   }
 }
