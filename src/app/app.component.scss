@@ -1,4 +1,5 @@
 @import "../styles/colors.scss";
+@import "../styles/respond-to.scss";
 
 :host {
   height: 100%;
@@ -8,8 +9,12 @@
   display: flex;
   justify-content: space-between;
   flex-direction: column;
+  @include respond-tablet($at-minimum: true) {
+    padding: 12px 150px;
+  }
+
   #header,
   .portfolio-content {
-    padding: 0px 96px;
+    padding: 0px 12px;
   }
 }

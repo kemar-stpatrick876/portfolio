@@ -1,0 +1,46 @@
+@import "../../../styles/colors.scss";
+@import "../../../styles/typography.scss";
+@import "../../../styles/respond-to.scss";
+.portfolio-home {
+  display: flex;
+  flex-direction: column;
+  .section {
+    margin: 120px 0;
+  }
+  #hero {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    .hello {
+      @include respond-tablet($at-minimum: true) {
+        width: 500px;
+        background: #fff;
+        position: absolute;
+        bottom: 0;
+        margin: 0;
+      }
+    }
+  }
+
+  #aboutMe {
+    display: flex;
+    flex-direction: column;
+    @include respond-tablet($at-minimum: true) {
+      flex-direction: row;
+      .about-text {
+        margin: 0 96px 0 48px;
+      }
+    }
+    .about-text {
+      padding: 24px 0;
+      span {
+        margin-bottom: 24px;
+      }
+    }
+    hr {
+      &:last-of-type {
+        margin-top: 60px;
+      }
+    }
+  }
+}
