@@ -1,0 +1,30 @@
+$small-desktop: 992px;
+$large-desktop: 1200px;
+$handheld: 768px;
+$handhelds-landscape: 1024px;
+$mobile: 640px;
+$mobile-landscape: 480px;
+
+@mixin respond-mobile() {
+  @media (max-width: ($handheld - 1)) {
+    @content;
+  }
+}
+
+@mixin respond-tablet($at-minimum: false) {
+  @if $at-minimum {
+    @media (min-width: $handheld) {
+      @content;
+    }
+  } @else {
+    @media (min-width: $handheld) and (max-width: ($small-desktop - 1)) {
+      @content;
+    }
+  }
+}
+
+@mixin respond-desktop() {
+  @media (min-width: $small-desktop) {
+    @content;
+  }
+}
