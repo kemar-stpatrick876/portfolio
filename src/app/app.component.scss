@@ -1,7 +1,15 @@
+@import "../styles/colors.scss";
+
+:host {
+  height: 100%;
+}
 .portfolio-main {
+  height: 100%;
   display: flex;
-  justify-content: space-evenly;
-  align-items: center;
-  height: 100vh;
+  justify-content: space-between;
   flex-direction: column;
+  #header,
+  .portfolio-content {
+    padding: 0px 96px;
+  }
 }

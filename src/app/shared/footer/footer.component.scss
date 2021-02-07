@@ -1,0 +1,19 @@
+
+@import '../../../styles/colors.scss';
+@import '../../../styles/typography.scss';
+
+.portfolio-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: $primary_grayish_dark_blue;
+  padding: 24px;
+  .social {
+    display: flex;
+    .social__icon {
+      &:first-of-type {
+        margin-right: 6px;
+      }
+    }
+  }
+}

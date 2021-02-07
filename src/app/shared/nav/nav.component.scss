@@ -1,0 +1,79 @@
+@import '../../../styles/colors.scss';
+@import '../../../styles/typography.scss';
+
+$arrow-border-lr: 15px;
+$arrow-border-bottom: 20px;
+
+:host {
+  width: 100%;
+}
+
+.portfolio-nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  .jump-to {
+    display: flex;
+    .arrow-up {
+      width: 0;
+      height: 0;
+      border-left: $arrow-border-lr solid transparent;
+      border-right: $arrow-border-lr solid transparent;
+    }
+
+    .arrow-down {
+      width: 0;
+      height: 0;
+      border-left: $arrow-border-lr solid transparent;
+      border-right: $arrow-border-lr solid transparent;
+    }
+  }
+  .nav {
+    width: 300px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    .nav__item {
+      color: $primary_grayish_dark_blue;
+      font-family: $font-family-sans;
+      font-size: 12px;
+      text-transform: uppercase;
+      cursor: pointer;
+      transition: all 500ms ease-in-out;
+      text-decoration: none;
+      &:hover, &--active {
+        color: $primary_cyan;
+      }
+
+    }
+  }
+
+  &--header {
+    width: 100%;
+    .jump-to {
+      .arrow-up {
+        border-bottom: $arrow-border-bottom solid $black;
+      }
+      .arrow-down {
+        border-top: $arrow-border-bottom solid $black;
+      }
+    }
+  }
+
+  &--footer {
+    width: 40%;
+    .jump-to {
+      .arrow-up {
+        border-bottom: $arrow-border-bottom solid $white;
+      }
+      .arrow-down {
+        border-top: $arrow-border-bottom solid $white;
+      }
+    }
+    .nav {
+      .nav__item {
+        color: $white;
+      }
+    }
+  }
+}
