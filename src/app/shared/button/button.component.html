@@ -1,7 +1,7 @@
 
   <label class="portfolio-button" [class]="'portfolio-button--'+ type"
   [ngClass]="{'portfolio-button--disabled': disabled}">
-    <span class="box-left" *ngIf="type === 'primary'">
+    <span class="box-left" *ngIf="type === 'primary-icon'">
       <img src="assets/icons/down-arrows.svg" alt="down arrows">
     </span>
     <input type="button" [value]="label" [disabled]="disabled" (click)="onclick.emit($event)">

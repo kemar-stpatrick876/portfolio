@@ -9,6 +9,7 @@ import { ProjectsModule } from './projects/projects.module';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 import { LayoutModule } from '@angular/cdk/layout';
 import { HttpClientModule } from '@angular/common/http';
+import { ContactModule } from './contact/contact.module';
 
 @NgModule({
   declarations: [AppComponent, PageNotFoundComponent],
@@ -18,8 +19,9 @@ import { HttpClientModule } from '@angular/common/http';
     SharedModule,
     HomeModule,
     ProjectsModule,
+    ContactModule,
     LayoutModule,
-    HttpClientModule
+    HttpClientModule,
   ],
   providers: [],
   bootstrap: [AppComponent],

@@ -1,0 +1,69 @@
+@import "../../../styles/colors.scss";
+@import "../../../styles/typography.scss";
+@import "../../../styles/respond-to.scss";
+.contact-me {
+  margin: 48px 0;
+  section {
+    display: flex;
+    flex-direction: column;
+    margin: 24px 0;
+    @include respond-desktop() {
+      flex-direction: row;
+      justify-content: space-between;
+
+      .section-content {
+        flex-basis: 60%;
+      }
+    }
+    &.contact-me__s1 {
+      border-top: 1px solid #ccc;
+      border-bottom: 1px solid #ccc;
+      padding: 48px 0;
+      .social {
+        display: flex;
+        .social__icon {
+          &:first-of-type {
+            margin-right: 6px;
+          }
+        }
+      }
+    }
+    &.contact-me__s2 {
+      form {
+        padding: 6px;
+        .form-field {
+          display: flex;
+          flex-direction: column;
+          margin: 24px 0;
+          &__label {
+            font-family: $font-family-sans;
+            font-size: 13px;
+            font-weight: bold;
+            margin-bottom: 12px;
+          }
+          &__input {
+            width: 100%;
+            border-radius: 0;
+            border: none;
+            background-color: $secondary_light_grey_text_field;
+            padding: 6px;
+            font-size: 13px;
+            font-family: $font-family-sans;
+          }
+
+          input[type="text"] {
+            height: 48px;
+          }
+          &--error {
+            .form-field__input {
+              border: 1px solid $secondary_bright_red;
+            }
+          }
+          &__error-msg {
+            color: $secondary_bright_red;
+          }
+        }
+      }
+    }
+  }
+}
