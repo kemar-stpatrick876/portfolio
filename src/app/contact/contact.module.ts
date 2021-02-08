@@ -6,6 +6,11 @@ import { SharedModule } from '../shared/shared.module';
 @NgModule({
   declarations: [ContactMeComponent],
   exports: [ContactMeComponent],
-  imports: [CommonModule, FormsModule, ReactiveFormsModule, SharedModule],
+  imports: [
+    CommonModule,
+    FormsModule,
+    ReactiveFormsModule,
+    SharedModule
+  ],
 })
 export class ContactModule {}
