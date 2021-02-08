@@ -1,0 +1,94 @@
+<div class="project-details">
+  <img
+    [src]="
+      'assets/images/detail/' +
+      responsiveSrv.screenType +
+      '/' +
+      project?.images?.details_hero
+    "
+    alt="project image"
+  />
+  <div class="about-project">
+    <div class="about-project__s1">
+      <div class="s1-box">
+        <hr />
+        <h1>{{ project?.name }}</h1>
+        <span
+          class="body-1"
+          *ngIf="responsiveSrv.screenType !== screenTypes.tablet"
+          >{{ project?.description }}</span
+        >
+
+        <span class="themes">
+          <h4
+            class="theme"
+            *ngFor="let theme of project?.themes; let last = last"
+          >
+            {{ theme }}<span *ngIf="!last"> / </span>
+          </h4>
+        </span>
+        <span class="technologies">
+          <h4
+            class="technology"
+            *ngFor="let technology of project?.technologies; let last = last"
+          >
+            {{ technology }}<span *ngIf="!last"> / </span>
+          </h4>
+        </span>
+
+        <portfolio-button
+          [type]="'secondary'"
+          [label]="'VIEW WEBSITE'"
+          (onclick)="viewWebsite(project)"
+        ></portfolio-button>
+        <hr />
+      </div>
+      <div
+        class="s1-box"
+        *ngIf="responsiveSrv.screenType === screenTypes.tablet"
+      >
+        <span class="body-1">{{ project?.description }}</span>
+      </div>
+    </div>
+    <div class="about-project__s2">
+      <div class="project-background">
+        <h1>Project Background</h1>
+        <span
+          class="project-background__text"
+          [ngClass]="{
+            'body-1': responsiveSrv.screenType === screenTypes.mobile,
+            'body-2': responsiveSrv.screenType !== screenTypes.mobile
+          }"
+          >{{ project?.background }}</span
+        >
+      </div>
+      <div class="static-previews">
+        <img
+          *ngFor="let preview of project?.images?.details_static_previews"
+          [src]="
+            'assets/images/detail/' + responsiveSrv.screenType + '/' + preview
+          "
+          alt="project image"
+        />
+      </div>
+    </div>
+  </div>
+  <div class="nav">
+    <button
+      class="nav__item nav__item--previous"
+      (click)="goToProject(project.previousProject)"
+    >
+      <img src="assets/icons/arrow-left.svg" alt="arrow left" />
+      <h1>{{ project?.previousProject?.name }}</h1>
+      <h3 class="nex-prev">Preview Project</h3>
+    </button>
+    <button
+      class="nav__item nav__item--next"
+      (click)="goToProject(project.nextProject)"
+    >
+      <img src="assets/icons/arrow-right.svg" alt="arrow right" />
+      <h1>{{ project?.nextProject?.name }}</h1>
+      <h3 class="nex-prev">Next Project</h3>
+    </button>
+  </div>
+</div>

@@ -1,0 +1,28 @@
+@import "../../../styles/colors.scss";
+@import "../../../styles/typography.scss";
+@import "../../../styles/respond-to.scss";
+:host {
+  width: 100%;
+}
+.portfolio-projects {
+  .portfolio-project {
+    display: flex;
+    flex-direction: column;
+    margin: 48px 0;
+    @include respond-tablet($at-minimum: true) {
+      flex-direction: row;
+      &:nth-child(even) {
+        flex-direction: row-reverse;
+      }
+    }
+
+    .about-project {
+      margin: 0 48px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      border-top: 1px solid #cccccc;
+      border-bottom: 1px solid #cccccc;
+    }
+  }
+}

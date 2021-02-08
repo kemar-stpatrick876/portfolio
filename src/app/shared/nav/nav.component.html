@@ -1,0 +1,36 @@
+<div class="portfolio-nav" [class]="'portfolio-nav--' + placement">
+  <div class="jump-to">
+    <div class="arrow-up"></div>
+    <div class="arrow-down"></div>
+  </div>
+  <nav class="nav nav--table-and-desktop" role="navigation">
+    <a
+      class="nav__item"
+      *ngFor="let item of navItems"
+      [routerLink]="item.path"
+      [routerLinkActive]="'nav__item--active'"
+      [routerLinkActiveOptions]="{ exact: true }"
+      >{{ item?.label }}</a
+    >
+  </nav>
+
+  <nav class="nav nav--mobile" role="navigation">
+    <button id="menuTrigger" (click)="mobileNavOpen = !mobileNavOpen">
+      <img src="assets/icons/close.svg" alt="close" *ngIf="mobileNavOpen" />
+      <img src="assets/icons/hamburger.svg" alt="open" *ngIf="!mobileNavOpen" />
+    </button>
+    <ul
+      class="mobile-nav-list"
+      [ngClass]="{ 'mobile-nav-list--open': mobileNavOpen }"
+    >
+      <a
+        class="nav__item"
+        *ngFor="let item of navItems"
+        [routerLink]="item.path"
+        [routerLinkActive]="'nav__item--active'"
+        [routerLinkActiveOptions]="{ exact: true }"
+        >{{ item?.label }}</a
+      >
+    </ul>
+  </nav>
+</div>

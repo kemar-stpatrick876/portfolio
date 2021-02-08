@@ -1,7 +1,20 @@
+@import "../styles/colors.scss";
+@import "../styles/respond-to.scss";
+
+:host {
+  height: 100%;
+}
 .portfolio-main {
+  height: 100%;
   display: flex;
-  justify-content: space-evenly;
-  align-items: center;
-  height: 100vh;
+  justify-content: space-between;
   flex-direction: column;
+  @include respond-tablet($at-minimum: true) {
+    padding: 12px 150px;
+  }
+
+  #header,
+  .portfolio-content {
+    padding: 0px 12px;
+  }
 }

@@ -1,0 +1,24 @@
+<div class="portfolio-projects">
+  <div class="portfolio-project" *ngFor="let project of projects">
+    <img
+      [src]="
+        'assets/images/portfolio/' +
+        responsiveSrv.screenType +
+        '/' +
+        project?.images?.index
+      "
+      alt="project image"
+    />
+    <div class="about-project">
+      <hr />
+      <h1 class="project-name">{{ project?.name }}</h1>
+      <span class="body-2">{{ project?.description }}</span>
+      <portfolio-button
+        [type]="'secondary'"
+        [label]="'View Project'"
+        (onclick)="viewProject(project)"
+      ></portfolio-button>
+      <hr />
+    </div>
+  </div>
+</div>

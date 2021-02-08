@@ -17,7 +17,7 @@
     outline: none;
     cursor: pointer;
   }
-  &--primary {
+  &--primary, &--primary-icon {
     background-color: $primary_dark_blue;
     color: $white;
     display: flex;
@@ -38,6 +38,11 @@
       flex-basis: 80%;
       border: none;
       opacity: .8;
+    }
+  }
+  &--primary {
+    input {
+      flex-basis: 100%;
     }
   }
   &--secondary {
