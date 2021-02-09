@@ -5,22 +5,22 @@
 $font-family-nova: 'Ibarra Real Nova', serif;
 $font-family-sans: 'Public Sans', sans-serif;
 
-h1, .h1{
+h1, h2, h3, h4, h5 {
   font-family: $font-family-nova;
+}
+h1, .h1{
   font-size: 50px;
   line-height: 50px;
   font-weight: bold;
 }
 
 h2, .h2{
-  font-family: $font-family-nova;
   font-size: 40px;
   line-height: 42px;
   font-weight: bold;
 }
 
 h3, .h3 {
-  font-family: $font-family-nova;
   font-size: 32px;
   line-height: 36px;
   font-weight: normal;

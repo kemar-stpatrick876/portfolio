@@ -3,27 +3,39 @@
 @import "../../../styles/respond-to.scss";
 
 .portfolio-footer {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
   background-color: $primary_grayish_dark_blue;
-  flex-direction: column;
-  padding: 24px;
-  height: 354px;
+  padding: 24px 0;
+  height: 200px;
   @include respond-tablet() {
     height: 80px;
-    flex-direction: row;
   }
   @include respond-desktop() {
     height: 40px;
-    flex-direction: row;
   }
-  .social {
+  &__content {
     display: flex;
-    .social__icon {
-      &:first-of-type {
-        margin-right: 6px;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+    height: 100%;
+
+    .social {
+      display: flex;
+      align-items: center;
+      a {
+        margin: 0 12px;
       }
+
     }
+
+    @include respond-tablet() {
+      padding: 0 48px;
+      flex-direction: row;
+    }
+    @include respond-desktop() {
+      padding: 0 92px;
+      flex-direction: row;
+    }
+
   }
 }
