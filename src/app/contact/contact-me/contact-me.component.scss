@@ -21,8 +21,9 @@
       padding: 48px 0;
       .social {
         display: flex;
+        align-items: center;
         .social__icon {
-          &:first-of-type {
+          &:not(:last-child) {
             margin-right: 6px;
           }
         }

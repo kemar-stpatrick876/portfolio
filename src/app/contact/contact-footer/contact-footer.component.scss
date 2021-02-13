@@ -1,0 +1,28 @@
+@import "../../../styles/respond-to.scss";
+
+.portfolio-contact-footer {
+  padding: 48px 96px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  hr {
+    display: none;
+  }
+
+  @include respond-tablet($at-minimum: true) {
+    flex-direction: row;
+    justify-content: space-around;
+    &__text {
+      width: 260PX;
+    }
+    hr {
+      display: block;
+      border-top: 1px solid #ccc;
+      width: 40%;
+    }
+  }
+  &__text {
+    text-align: center;
+  }
+}
