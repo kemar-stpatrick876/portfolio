@@ -11,7 +11,6 @@
   <div class="about-project">
     <div class="about-project__s1">
       <div class="s1-box">
-        <hr />
         <h1>{{ project?.name }}</h1>
         <span
           class="body-1"
@@ -19,21 +18,11 @@
           >{{ project?.description }}</span
         >
 
-        <span class="themes">
-          <h4
-            class="theme"
-            *ngFor="let theme of project?.themes; let last = last"
-          >
-            {{ theme }}<span *ngIf="!last"> / </span>
-          </h4>
+        <span class="themes body-1">
+         {{ project?.themes?.join('/')}}
         </span>
-        <span class="technologies">
-          <h4
-            class="technology"
-            *ngFor="let technology of project?.technologies; let last = last"
-          >
-            {{ technology }}<span *ngIf="!last"> / </span>
-          </h4>
+        <span class="technologies body-1">
+          {{ project?.technologies?.join('/')}}
         </span>
 
         <portfolio-button
@@ -41,7 +30,6 @@
           [label]="'VIEW WEBSITE'"
           (onclick)="viewWebsite(project)"
         ></portfolio-button>
-        <hr />
       </div>
       <div
         class="s1-box"
@@ -79,16 +67,20 @@
       (click)="goToProject(project.previousProject)"
     >
       <img src="assets/icons/arrow-left.svg" alt="arrow left" />
-      <h1>{{ project?.previousProject?.name }}</h1>
-      <h3 class="nex-prev">Preview Project</h3>
+      <div class="text">
+        <span class="name">{{ project?.previousProject?.name }}</span>
+        <span class="nex-prev">Previous Project</span>
+      </div>
     </button>
     <button
       class="nav__item nav__item--next"
       (click)="goToProject(project.nextProject)"
     >
       <img src="assets/icons/arrow-right.svg" alt="arrow right" />
-      <h1>{{ project?.nextProject?.name }}</h1>
-      <h3 class="nex-prev">Next Project</h3>
+      <div class="text">
+        <span class="name">{{ project?.nextProject?.name }}</span>
+        <span class="nex-prev">Next Project</span>
+      </div>
     </button>
   </div>
 </div>

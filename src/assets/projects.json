@@ -1,15 +1,15 @@
 [
   {
     "id": 1,
-    "name": "Fylo 1",
-    "description": "This project was built in pure HTML and CSS. I had mobile and desktop designs to work to and built it so that it was fully-responsive. I took a mobile-first approach and used modern CSS like Flexbox and Grid for layout purposes.",
-    "background": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+    "name": "Manage",
+    "description": "This project required me to build a fully responsive landing page to the designs provided. I used HTML5, along with CSS Grid and JavaScript for the areas that required interactivity, such as the testimonial slider.",
+    "background": "This project was a front-end  challenge from Frontend Mentor. It’s a platform that enables you to practice building websites to a design and project brief. Each challenge includes mobile and desktop designs to show how the website should look at different screen sizes. Creating these projects has helped me refine my workflow and solve real-world coding problems. I’ve learned something new with each project, helping me to improve and adapt my style.",
     "images": {
-      "index": "image-portfolio-fylo.jpg",
-      "details_hero": "image-fylo-hero.jpg",
+      "index": "image-portfolio-manage.jpg",
+      "details_hero": "image-manage-hero.jpg",
       "details_static_previews": [
-        "image-fylo-preview-1.jpg",
-        "image-fylo-preview-2.jpg"
+        "image-manage-preview-1.jpg",
+        "image-manage-preview-2.jpg"
       ]
     },
     "themes": ["Interaction Design ", "Front End Development"],
@@ -18,15 +18,15 @@
   },
   {
     "id": 2,
-    "name": "Fylo 2",
-    "description": "This project was built in pure HTML and CSS. I had mobile and desktop designs to work to and built it so that it was fully-responsive. I took a mobile-first approach and used modern CSS like Flexbox and Grid for layout purposes.",
-    "background": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+    "name": "Bookmark",
+    "description": "This project required me to build a fully responsive landing page to the designs provided. I used HTML5, along with CSS Grid and JavaScript for the areas that required interactivity, such as the features section.",
+    "background": "This project was a front-end  challenge from Frontend Mentor. It’s a platform that enables you to practice building websites to a design and project brief. Each challenge includes mobile and desktop designs to show how the website should look at different screen sizes. Creating these projects has helped me refine my workflow and solve real-world coding problems. I’ve learned something new with each project, helping me to improve and adapt my style.",
     "images": {
-      "index": "image-portfolio-fylo.jpg",
-      "details_hero": "image-fylo-hero.jpg",
+      "index": "image-portfolio-bookmark.jpg",
+      "details_hero": "image-bookmark-hero.jpg",
       "details_static_previews": [
-        "image-fylo-preview-1.jpg",
-        "image-fylo-preview-2.jpg"
+        "image-bookmark-preview-1.jpg",
+        "image-bookmark-preview-2.jpg"
       ]
     },
     "themes": ["Interaction Design ", "Front End Development"],
@@ -35,9 +35,26 @@
   },
   {
     "id": 3,
-    "name": "Fylo 3",
+    "name": "Insure",
+    "description": "This was a small project which mostly consisted of HTML and CSS. I built a fully-responsive landing page. The only JavaScript this project required was to enable the toggling of the mobile navigation.",
+    "background": "This project was a front-end  challenge from Frontend Mentor. It’s a platform that enables you to practice building websites to a design and project brief. Each challenge includes mobile and desktop designs to show how the website should look at different screen sizes. Creating these projects has helped me refine my workflow and solve real-world coding problems. I’ve learned something new with each project, helping me to improve and adapt my style.",
+    "images": {
+      "index": "image-portfolio-insure.jpg",
+      "details_hero": "image-insure-hero.jpg",
+      "details_static_previews": [
+        "image-insure-preview-1.jpg",
+        "image-insure-preview-2.jpg"
+      ]
+    },
+    "themes": ["Interaction Design ", "Front End Development"],
+    "technologies": ["HTML", "CSS"],
+    "liveUrl": "www.google.com"
+  },
+  {
+    "id": 4,
+    "name": "Fylo",
     "description": "This project was built in pure HTML and CSS. I had mobile and desktop designs to work to and built it so that it was fully-responsive. I took a mobile-first approach and used modern CSS like Flexbox and Grid for layout purposes.",
-    "background": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+    "background": "This project was a front-end  challenge from Frontend Mentor. It’s a platform that enables you to practice building websites to a design and project brief. Each challenge includes mobile and desktop designs to show how the website should look at different screen sizes. Creating these projects has helped me refine my workflow and solve real-world coding problems. I’ve learned something new with each project, helping me to improve and adapt my style.",
     "images": {
       "index": "image-portfolio-fylo.jpg",
       "details_hero": "image-fylo-hero.jpg",
