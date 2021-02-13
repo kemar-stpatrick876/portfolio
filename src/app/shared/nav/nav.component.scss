@@ -14,22 +14,6 @@ $arrow-border-bottom: 20px;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  .jump-to {
-    display: flex;
-    .arrow-up {
-      width: 0;
-      height: 0;
-      border-left: $arrow-border-lr solid transparent;
-      border-right: $arrow-border-lr solid transparent;
-    }
-
-    .arrow-down {
-      width: 0;
-      height: 0;
-      border-left: $arrow-border-lr solid transparent;
-      border-right: $arrow-border-lr solid transparent;
-    }
-  }
   .nav {
     width: 300px;
     display: flex;
@@ -43,6 +27,7 @@ $arrow-border-bottom: 20px;
       cursor: pointer;
       transition: all 500ms ease-in-out;
       text-decoration: none;
+      // margin: 0 12px;
       &:hover,
       &--active {
         color: $primary_cyan;
@@ -108,15 +93,7 @@ $arrow-border-bottom: 20px;
     height: 100%;
     @include respond-tablet($at-minimum: true) {
       flex-direction: row;
-      width: 40%;
-    }
-    .jump-to {
-      .arrow-up {
-        border-bottom: $arrow-border-bottom solid $white;
-      }
-      .arrow-down {
-        border-top: $arrow-border-bottom solid $white;
-      }
+      width: 35%;
     }
     .nav {
       display: flex;

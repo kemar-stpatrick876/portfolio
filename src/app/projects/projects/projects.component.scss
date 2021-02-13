@@ -11,13 +11,17 @@
     margin: 48px 0;
     @include respond-tablet($at-minimum: true) {
       flex-direction: row;
+      justify-content: space-between;
       &:nth-child(even) {
         flex-direction: row-reverse;
       }
     }
 
+    img {
+      flex-basis: 40%;
+    }
     .about-project {
-      margin: 0 48px;
+      flex-basis: 40%;
       display: flex;
       flex-direction: column;
       justify-content: center;

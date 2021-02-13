@@ -30,4 +30,8 @@ export class NavComponent implements OnInit {
   constructor() {}
 
   ngOnInit(): void {}
+
+  mobileNavItemCLicked(): void {
+    this.mobileNavOpen = false;
+  }
 }

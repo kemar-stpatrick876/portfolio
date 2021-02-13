@@ -9,12 +9,14 @@
   display: flex;
   justify-content: space-between;
   flex-direction: column;
-  @include respond-tablet($at-minimum: true) {
-    padding: 12px 150px;
-  }
+  overflow-x: hidden;
+
 
   #header,
   .portfolio-content {
-    padding: 0px 12px;
+    padding: 12px;
+    @include respond-tablet($at-minimum: true) {
+      padding: 12px 100px;
+    }
   }
 }

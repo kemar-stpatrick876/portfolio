@@ -5,5 +5,6 @@
   <div class="portfolio-content">
     <router-outlet></router-outlet>
   </div>
+  <portfolio-contact-footer *ngIf="!isContactRoute"></portfolio-contact-footer>
   <portfolio-footer id="footer"></portfolio-footer>
 </div>

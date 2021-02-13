@@ -7,15 +7,24 @@
   .about-project {
     display: flex;
     flex-direction: column;
+
     &__s1 {
       display: flex;
       flex-direction: column;
+      height: 100%;
+      border-top: 1px solid #cccccc;
+      border-bottom: 1px solid #cccccc;
+      padding: 12px 0;
+      margin: 12px 0;
+      justify-content: space-between;
       @include respond-tablet() {
         flex-direction: row !important;
         align-items: center;
         .s1-box {
           &:last-of-type {
             margin: 0 48px;
+            flex-basis: 50%;
+
           }
         }
       }
@@ -38,8 +47,10 @@
       .technologies {
         color: $primary_cyan;
         display: inline-flex;
+        width: 100%;
         h4 {
           padding: 0;
+          margin: 6px 0;
         }
       }
     }
@@ -55,8 +66,6 @@
   }
 
   .nav {
-    border-top: 1px solid #cccccc;
-    border-bottom: 1px solid #cccccc;
     display: flex;
     justify-content: space-between;
     &__item {
@@ -67,21 +76,58 @@
       background-color: transparent;
       cursor: pointer;
       outline: none;
+      border: 1px solid #cccccc;
+      flex-basis: 50%;
+      padding: 24px 0;
+
       &:hover {
         opacity: 0.6;
       }
       &:first-of-type {
         align-items: flex-start;
+        border-left: none;
+        border-right: none;
+        .text {
+          align-items: flex-start;
+        }
       }
       &:last-of-type {
         align-items: flex-end;
+        border-right: none;
+
+        .text {
+          align-items: flex-end;
+        }
+      }
+      @include respond-tablet($at-minimum: true) {
+        &:first-of-type {
+          flex-direction: row;
+          align-items: center;
+        }
+        &:last-of-type {
+          flex-direction: row-reverse;
+          align-items: center;
+        }
       }
       img {
-        height: 18px;
-        width: 18px;
+        height: 12px;
+        width: 12px;
+        margin: 0 12px;
       }
-      .nex-prev {
-        color: $primary_cyan;
+      .text {
+        display: flex;
+        flex-direction: column;
+        font-weight: 400;
+        font-family: $font-family-nova;
+
+        .name {
+          font-size: 32px;
+        }
+        .nex-prev {
+          color: $primary_cyan;
+          font-size: 16px;
+
+        }
       }
     }
   }
