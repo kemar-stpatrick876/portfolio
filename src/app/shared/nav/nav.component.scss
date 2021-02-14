@@ -72,6 +72,7 @@ $arrow-border-bottom: 20px;
           display: none;
           transition: all 0.5s cubic-bezier(0.77, 0.2, 0.05, 1);
           z-index: 1000;
+          list-style: none;
           &--open {
             right: 15px;
             display: flex;

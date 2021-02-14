@@ -1,8 +1,8 @@
 <div class="portfolio-nav" [class]="'portfolio-nav--' + placement">
-  <a [routerLink]="'/'">
-    <img [src]="'assets/images/logo/' + placement + '.svg'" alt="" />
+  <a [routerLink]="'/'" alt='Go home'>
+    <img [src]="'assets/images/logo/' + placement + '.svg'" alt="logo" />
   </a>
-  <nav class="nav nav--table-and-desktop" role="navigation">
+  <nav class="nav nav--table-and-desktop">
     <a
       class="nav__item"
       *ngFor="let item of navItems"
@@ -13,7 +13,7 @@
     >
   </nav>
 
-  <nav class="nav nav--mobile" role="navigation">
+  <nav class="nav nav--mobile">
     <button id="menuTrigger" (click)="mobileNavOpen = !mobileNavOpen">
       <img src="assets/icons/close.svg" alt="close" *ngIf="mobileNavOpen" />
       <img src="assets/icons/hamburger.svg" alt="open" *ngIf="!mobileNavOpen" />
@@ -22,14 +22,14 @@
       class="mobile-nav-list"
       [ngClass]="{ 'mobile-nav-list--open': mobileNavOpen }"
     >
-      <a
+      <li
         class="nav__item"
         *ngFor="let item of navItems"
         [routerLink]="item.path"
         [routerLinkActive]="'nav__item--active'"
         [routerLinkActiveOptions]="{ exact: true }"
         (click)="mobileNavItemCLicked()"
-        >{{ item?.label }}</a
+        >{{ item?.label }}</li
       >
     </ul>
   </nav>
